@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1D1C1A" />
+      <stop offset="100%" stop-color="#151413" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E07A5F" />
+      <stop offset="100%" stop-color="#C35B34" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bgGrad)" stroke="#302E2A" stroke-width="2" />
+  <!-- 'DC' Monogram -->
+  <path d="M16 18 H27 C34 18 39 23 39 32 C39 41 34 46 27 46 H16 V18 Z M23 25 V39 H26 C30 39 32 36 32 32 C32 28 30 25 26 25 Z" fill="url(#accentGrad)" />
+  <path d="M50 25 C47 20 42 18 37 18 C30 18 25 23 25 32 C25 41 30 46 37 46 C42 46 47 44 50 39" fill="none" stroke="#FAF7F2" stroke-width="4.5" stroke-linecap="round" />
+</svg>

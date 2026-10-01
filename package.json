@@ -1,0 +1,23 @@
+{
+  "name": "chandramohan-portfolio",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Personal Portfolio & Case Studies of Dagam Chandramohan - Full-Stack Developer",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static build ready'",
+    "start": "npx serve . -l 10000",
+    "dev": "npx serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  },
+  "keywords": [
+    "portfolio",
+    "fullstack",
+    "developer",
+    "chandramohan"
+  ],
+  "author": "Dagam Chandramohan <mohandagam04@gmail.com>",
+  "license": "MIT"
+}

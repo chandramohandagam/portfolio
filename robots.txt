@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /php/
+Disallow: /sql/
+
+# <!-- PLACEHOLDER: Update domain to match production domain before submitting to Google Search Console -->
+Sitemap: https://yourdomain.com/sitemap.xml

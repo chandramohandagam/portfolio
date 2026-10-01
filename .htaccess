@@ -1,0 +1,86 @@
+# ==============================================================================
+# Apache Security and Performance Configuration
+# DAGAM CHANDRAMOHAN Portfolio Website
+# ==============================================================================
+
+# Disable directory browsing
+Options -Indexes
+
+# ------------------------------------------------------------------------------
+# 1. Force HTTPS (Production)
+# ------------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP_HOST} !^localhost [NC]
+  RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 2. Deny access to sensitive files and directories
+# ------------------------------------------------------------------------------
+<FilesMatch "^(config\.php|\.env|\.git|\.gitignore|schema\.sql|composer\.json)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Protect sql directory
+<IfModule mod_rewrite.c>
+  RewriteRule ^sql/ - [F,L]
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 3. Security Headers
+# ------------------------------------------------------------------------------
+<IfModule mod_headers.c>
+  # Prevent MIME type sniffing
+  Header set X-Content-Type-Options "nosniff"
+
+  # Prevent clickjacking
+  Header set X-Frame-Options "DENY"
+
+  # Control referrer information
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Restrict browser APIs not used by this portfolio
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+
+  # Content Security Policy (Self + Google Fonts + inline safe scripts)
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none';"
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 4. Compression (Gzip / Deflate)
+# ------------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 5. Browser Caching
+# ------------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/pdf "access plus 1 month"
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 6. Custom 404 Error Page
+# ------------------------------------------------------------------------------
+ErrorDocument 404 /404.html

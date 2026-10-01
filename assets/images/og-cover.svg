@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradient: Warm Charcoal -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151413" />
+      <stop offset="50%" stop-color="#1D1C1A" />
+      <stop offset="100%" stop-color="#151413" />
+    </linearGradient>
+
+    <!-- Ambient Terracotta Glow -->
+    <radialGradient id="glow" cx="80%" cy="20%" r="55%">
+      <stop offset="0%" stop-color="#C35B34" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#C35B34" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Warm Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E07A5F" />
+      <stop offset="100%" stop-color="#C35B34" />
+    </linearGradient>
+
+    <!-- Subtle Architectural Grid Pattern -->
+    <pattern id="gridPattern" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#302E2A" stroke-width="0.8" stroke-opacity="0.5" />
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#glow)" />
+  <rect width="1200" height="630" fill="url(#gridPattern)" />
+
+  <!-- Outer Border Frame -->
+  <rect x="24" y="24" width="1152" height="582" rx="16" fill="none" stroke="#302E2A" stroke-width="1.5" />
+
+  <!-- Monogram Box -->
+  <g transform="translate(90, 85)">
+    <rect width="64" height="64" rx="14" fill="#252421" stroke="#3D3B36" stroke-width="1.5" />
+    <text x="32" y="42" font-family="'Space Grotesk', -apple-system, sans-serif" font-weight="700" font-size="26" fill="#E07A5F" text-anchor="middle">DC</text>
+  </g>
+
+  <!-- Tagline pill badge -->
+  <g transform="translate(170, 99)">
+    <rect width="250" height="36" rx="18" fill="#252421" stroke="#3D3B36" stroke-width="1" />
+    <circle cx="20" cy="18" r="4" fill="#E07A5F" />
+    <text x="36" y="23" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#ABA69C" letter-spacing="1.5">FULL-STACK DEVELOPER</text>
+  </g>
+
+  <!-- Name & Editorial Title -->
+  <text x="90" y="225" font-family="'Space Grotesk', -apple-system, sans-serif" font-weight="700" font-size="52" fill="#F7F4EE" letter-spacing="-1">DAGAM CHANDRAMOHAN</text>
+  <text x="90" y="275" font-family="'Playfair Display', Georgia, serif" font-weight="600" font-size="30" fill="url(#accentGrad)" font-style="italic">Building meaningful digital experiences through code, creativity, and AI.</text>
+
+  <!-- Mission statement -->
+  <text x="90" y="350" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" fill="#ABA69C" line-height="1.5">
+    <tspan x="90" dy="0">AgriTech Platforms &amp; Intelligent Healthcare Telemetry Systems</tspan>
+    <tspan x="90" dy="32" font-size="16" fill="#7A766D">Showcasing Agro Mitra, Diagnosphere &amp; AI Smart Healthcare with documented production case studies.</tspan>
+  </text>
+
+  <!-- Footer metadata tags -->
+  <g transform="translate(90, 475)">
+    <rect width="190" height="42" rx="21" fill="#252421" stroke="#3D3B36" stroke-width="1" />
+    <text x="95" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#F7F4EE" text-anchor="middle">B.Tech CSE · BIET</text>
+
+    <rect x="205" width="220" height="42" rx="21" fill="#252421" stroke="#3D3B36" stroke-width="1" />
+    <text x="315" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#F7F4EE" text-anchor="middle">3 Production Case Studies</text>
+
+    <rect x="440" width="250" height="42" rx="21" fill="#252421" stroke="#3D3B36" stroke-width="1" />
+    <text x="565" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#E07A5F" text-anchor="middle">Hyderabad, Telangana, India</text>
+  </g>
+</svg>

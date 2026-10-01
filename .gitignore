@@ -1,0 +1,18 @@
+# Database credentials & sensitive configs
+php/config.php
+.env
+
+# Logs & temp files
+*.log
+.DS_Store
+Thumbs.db
+
+# Dependencies & deployments
+node_modules/
+.vercel/
+
+# Editor directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

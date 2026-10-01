@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Not Found (404) | Dagam Chandramohan</title>
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#FAF7F2">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans + Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('dc_portfolio_theme');
+        var theme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header id="main-header" class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-mark" aria-label="Dagam Chandramohan Home">
+        <span class="brand-name">CHANDRAMOHAN</span>
+        <span class="brand-dot" aria-hidden="true"></span>
+      </a>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Switch theme" type="button">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a href="index.html" class="btn-editorial-secondary" style="min-height: 38px; padding: 0 16px; font-size: 0.8125rem;">
+          Return to Portfolio
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 404 Main Content -->
+  <main id="main-content" style="flex: 1; display: grid; place-items: center; padding: clamp(7rem, 14vw, 10rem) 24px 60px;">
+    <div style="text-align: center; max-width: 580px; margin: 0 auto;">
+      <div style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--primary-accent); padding: 4px 12px; background-color: var(--accent-soft); border: 1px solid var(--accent-border); border-radius: var(--r-pill); margin-bottom: 20px;">
+        Error 404 · Navigation Route
+      </div>
+
+      <div style="font-family: var(--font-display); font-size: clamp(4.5rem, 12vw, 7.5rem); font-weight: 700; color: var(--primary-accent); line-height: 1; margin-bottom: 16px; letter-spacing: -0.04em;">
+        404
+      </div>
+
+      <h1 class="serif-heading" style="font-size: var(--fs-h2); font-weight: 600; margin-bottom: 16px; color: var(--text-main);">
+        This page could not be located.
+      </h1>
+
+      <p style="font-size: var(--fs-lead); color: var(--text-muted); margin-bottom: 36px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+        The requested resource has been moved, renamed, or is currently unavailable. Let's get you back to the portfolio showcase.
+      </p>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px;">
+        <a href="index.html" class="btn-editorial-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span>Back to Home</span>
+        </a>
+
+        <a href="index.html#case-studies" class="btn-editorial-secondary">
+          <span>View Case Studies</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="padding: 24px 0;">
+    <div class="container footer-inner" style="justify-content: center; text-align: center;">
+      <div>
+        &copy; <span id="current-year">2026</span> <strong style="color: var(--text-main);">DAGAM CHANDRAMOHAN</strong> · Designed with warm neutrals &amp; restrained accents.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
